@@ -7,14 +7,14 @@ import streamlit as st
 sns.set(style='dark')
 
 # Load cleaned dataset
-df = pd.read_csv('C:\\Users\\Asus\\Documents\\KEPO!\\MSIB\\BANGKIT\\Proyek Analisis Data\\PRSA_Data_cleaned.csv')
+df = pd.read_csv('PRSA_Data_cleaned.csv')
 
 # Convert the 'date' column to datetime format for better handling
 df['datetime'] = pd.to_datetime(df[['year', 'month', 'day', 'hour']])
 
 # Sidebar
 with st.sidebar:
-    st.image("C:\\Users\\Asus\\Documents\\KEPO!\\MSIB\\BANGKIT\\Proyek Analisis Data\\logo.jpeg", width=100)
+    st.image("logo.jpeg", width=100)
 
     # Date Range Selection
     min_date = df['datetime'].min()
