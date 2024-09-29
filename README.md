@@ -1,6 +1,6 @@
-# Proyek-Analisis-Data
+# Submission
 
-## Setup environment
+## Proyek Analisis Data
 ## Setup Environment - Anaconda
 ```
 conda create --name alaa python=3.9
