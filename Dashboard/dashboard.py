@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -6,8 +7,12 @@ import streamlit as st
 # Setup Streamlit
 sns.set(style='dark')
 
-# Load cleaned dataset
-df = pd.read_csv('Dashboard/PRSA_Data_cleaned.csv')
+# Mendapatkan direktori skrip saat ini
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'PRSA_Data_cleaned.csv')
+
+# Membaca file CSV
+df = pd.read_csv(file_path)
 
 # Convert the 'date' column to datetime format for better handling
 df['datetime'] = pd.to_datetime(df[['year', 'month', 'day', 'hour']])
