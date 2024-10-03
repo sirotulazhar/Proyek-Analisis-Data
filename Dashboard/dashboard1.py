@@ -3,8 +3,12 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Load dataset
-data = pd.read_csv('day.csv')
+# Mendapatkan direktori skrip saat ini
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'day.csv')
+
+# Membaca file CSV
+data = pd.read_csv(file_path)
 
 # Konfigurasi tampilan dashboard
 st.set_page_config(page_title="Bike Sharing Dashboard", layout="wide")
